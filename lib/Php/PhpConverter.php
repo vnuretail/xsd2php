@@ -165,6 +165,8 @@ class PhpConverter extends AbstractConverter
             } else {
                 $this->handleClassExtension($class, $element->getType());
             }
+
+            $class->setIsArray($this->isArrayElement($element->getType()));
         }
         return $this->classes[spl_object_hash($element)]["class"];
     }

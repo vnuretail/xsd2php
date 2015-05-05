@@ -4,6 +4,8 @@ namespace Goetas\Xsd\XsdToPhp\Php\Structure;
 class PHPClass
 {
 
+	protected $isArray;
+
     protected $name;
 
     protected $namespace;
@@ -237,4 +239,16 @@ class PHPClass
         $this->abstract = (boolean) $abstract;
         return $this;
     }
+
+	public function isArray()
+	{
+		return $this->isArray;
+	}
+
+	public function setIsArray($isArray = true)
+	{
+		$this->isArray = $isArray;
+		return $this;
+	}
+
 }
